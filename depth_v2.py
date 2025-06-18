@@ -82,7 +82,7 @@ if __name__ == '__main__':
                 results = yolo_model(raw_frame)[0]
                 human_boxes = []
                 if results.boxes is not None:
-                    human_boxes = [box for box in results.boxes if int(box.cls[0]) == 0]  # class 0 = person
+                    human_boxes = [box for box in results.boxes if int(box.cls[0]) == 0]  # class 0 = person, 2 = car
 
                 with torch.no_grad():
                     depth_tensor = depth_anything.infer_image(raw_frame, args.input_size)
