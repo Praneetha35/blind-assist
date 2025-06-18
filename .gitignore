@@ -1,6 +1,4 @@
 myvenv
 checkpoints
 sample_video
-video_depth_vis
 yolov8n.pt
-assets/examples_video
